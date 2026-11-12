@@ -83,7 +83,7 @@ p{color:var(--ink)}
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:var(--navy)}
 .hero-grid{flex:1;display:grid;grid-template-columns:minmax(0,52%) minmax(0,48%);min-height:0}
-.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:128px 44px 118px max(32px,calc((100vw - 1240px)/2))}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:128px 44px 118px max(32px,calc((100vw - 1280px)/2 + 32px))}
 .hero-copy > *{max-width:565px}
 .hero h1{color:var(--ivory);margin:8px 0 0;font-size:clamp(40px,4.6vw,66px);line-height:1.03}
 .hero-sub{color:rgba(251,248,243,.8);font-size:17.5px;line-height:1.65;margin-top:22px}
