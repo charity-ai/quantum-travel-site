@@ -2,7 +2,7 @@
 
 The public site for Quantum Travel, an independent travel advisory affiliated with Surge365.
 
-Live booking engine: https://www.surge365.com/Charity
+Live booking engine: pending. Set `bookingUrl` in `app.js` once the Vortex URL is confirmed.
 
 Production domain: https://quantumtravel365.com
 
@@ -30,7 +30,7 @@ _headers        security and cache headers for Cloudflare Pages
 
 ```js
 const SITE = {
-  bookingUrl: 'https://www.surge365.com/Charity',
+  bookingUrl: '', // e.g. https://www.myvortex365.com/yourvortexname
   email: 'charity@quantumtravel365.com',
   formEndpoint: '', // paste a GoHighLevel inbound webhook to go live
   ...
@@ -38,6 +38,15 @@ const SITE = {
 ```
 
 Change `bookingUrl` once and the whole page follows. Leave `formEndpoint` empty and the trip request form runs in preview mode, which is safe for demos but does not deliver leads.
+
+## About the booking URL
+
+Surge365 gives you two different links and they are not interchangeable.
+
+- `surge365.com/yourname` is the **business opportunity** page. It pitches joining the company. Never send travel clients there.
+- `myvortex365.com/yourvortexname` is your **customer travel site**, where people search and book. This is the one that belongs in `bookingUrl`.
+
+Find the Vortex name in the back office at my.surge365.com, in the Vortex or Marketing Site section, or in your welcome email. While `bookingUrl` is empty, every booking button opens the trip request form so no lead is lost.
 
 ## Local preview
 

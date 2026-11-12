@@ -1,6 +1,7 @@
-# Branded short link for bios, QR codes and business cards
-/book  https://www.surge365.com/Charity  302
-/go    https://www.surge365.com/Charity  302
+# Branded short link for bios, QR codes and business cards.
+# Point this at your Vortex booking site once you have the exact URL.
+/book  /#plan  302
+/go    /#plan  302
 
 # Redirect www to the apex domain (both hostnames must be attached in Pages)
 https://www.quantumtravel365.com/*  https://quantumtravel365.com/:splat  301!

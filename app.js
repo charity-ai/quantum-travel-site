@@ -3,7 +3,10 @@
    EDIT THIS BLOCK FIRST. Everything else reads from it.
 */
 const SITE = {
-  bookingUrl: 'https://www.surge365.com/Charity', // your Surge365 personal booking site
+  // Your CUSTOMER booking site, not the recruiting page. It looks like:
+  // https://www.myvortex365.com/yourvortexname
+  // Leave blank and every booking button opens the trip request form instead.
+  bookingUrl: '',
   email: 'charity@quantumtravel365.com',
   phone: '(951) 000-0000',
   // Paste your GoHighLevel inbound webhook here when the form is ready.
@@ -17,9 +20,14 @@ const SITE = {
   /* ---------- booking links ---------- */
   const bookLinks = document.querySelectorAll('.js-book');
   bookLinks.forEach(function (a) {
-    a.href = SITE.bookingUrl;
-    a.target = '_blank';
-    a.rel = 'noopener';
+    if (SITE.bookingUrl) {
+      a.href = SITE.bookingUrl;
+      a.target = '_blank';
+      a.rel = 'noopener';
+    } else {
+      a.href = '#plan';
+      a.removeAttribute('target');
+    }
   });
 
   /* ---------- contact links ---------- */
