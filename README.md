@@ -6,6 +6,8 @@ Live booking engine: pending. Set `bookingUrl` in `app.js` once the Vortex URL i
 
 Production domain: https://quantumtravel365.com
 
+Interim host: GitHub Pages (charity-ai.github.io/quantum-travel-site). Cloudflare Pages remains the production target.
+
 Branded short link: https://quantumtravel365.com/book (302 to the booking engine)
 
 ## Stack
