@@ -6,6 +6,8 @@ Live booking engine: https://www.surge365.com/Charity
 
 Production domain: https://quantumtravel365.com
 
+Branded short link: https://quantumtravel365.com/book (302 to the booking engine)
+
 ## Stack
 
 Plain HTML, CSS and JavaScript. No framework, no build step, no dependencies. Cloudflare Pages serves the repository root directly.
