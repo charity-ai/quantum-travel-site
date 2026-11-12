@@ -1,0 +1,2 @@
+# Redirect www to the apex domain (both hostnames must be attached in Pages)
+https://www.quantumtravel365.com/* https://quantumtravel365.com/:splat 301!
