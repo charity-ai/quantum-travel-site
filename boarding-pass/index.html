@@ -35,14 +35,35 @@
 .nav-paper .burger span{background:var(--ink)}
 .nav-paper.solid{background:rgba(251,248,243,.97);box-shadow:0 1px 0 rgba(10,26,42,.1)}
 .bp-note{font-size:12px;letter-spacing:.04em;color:#5E6E7A;margin-top:16px}
-.bp-pass{background:linear-gradient(155deg,#10263A,#081521);border:1px solid rgba(201,164,91,.45);border-radius:18px;padding:30px 32px;height:258px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 30px 60px rgba(0,0,0,.35);position:relative;overflow:hidden;transform:rotate(-2.5deg)}
-.bp-pass:before{content:"";position:absolute;right:-70px;top:-70px;width:260px;height:260px;border:1px solid rgba(201,164,91,.3);border-radius:50%}
-.bp-pass:after{content:"";position:absolute;right:-20px;top:-20px;width:160px;height:160px;border:1px solid rgba(201,164,91,.18);border-radius:50%}
-.bp-pass .pt{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:rgba(251,248,243,.6)}
-.bp-pass .pt b{color:var(--gold);font-weight:600}
-.bp-pass .pm{font-family:'Cormorant Garamond',serif;font-size:48px;line-height:1;color:var(--ivory)}
-.bp-pass .pm span{display:block;font-family:'Manrope',sans-serif;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-top:12px}
-.bp-pass .pb{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,248,243,.5)}
+.ticket-wrap{transform:rotate(-2.6deg);filter:drop-shadow(0 30px 34px rgba(6,40,70,.32)) drop-shadow(0 0 .7px rgba(74,50,12,.6))}
+.ticket{--stub:98px;position:relative;padding:3.2px;border-radius:15px;
+  background:linear-gradient(180deg,#F3DCA4 0%,#D9B26A 16%,#B8893C 42%,#8A6224 60%,#C79A4B 80%,#E8C98A 100%);
+  -webkit-mask:
+    radial-gradient(circle 9px at calc(100% - var(--stub)) 0,transparent 98%,#000 100%),
+    radial-gradient(circle 9px at calc(100% - var(--stub)) 100%,transparent 98%,#000 100%);
+  -webkit-mask-composite:source-in;
+  mask-composite:intersect}
+.ticket-inner{position:relative;height:240px;border-radius:12.4px;overflow:hidden;
+  background:linear-gradient(148deg,#FEFBF4 0%,#F7F0E1 55%,#F1E7D4 100%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.75),inset 0 0 0 2.4px rgba(169,121,47,.28);
+  display:grid;grid-template-columns:1fr var(--stub)}
+.ticket-inner:before{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:linear-gradient(112deg,transparent 28%,rgba(255,255,255,.55) 40%,rgba(255,255,255,.08) 49%,transparent 60%)}
+.t-main{position:relative;z-index:2;padding:20px 22px 15px;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+.t-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.t-brand{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:#0A1A2A;font-weight:700;white-space:nowrap}
+.t-type{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:#A9792F;font-weight:700;white-space:nowrap}
+.t-label{display:block;font-size:6.5px;letter-spacing:.2em;text-transform:uppercase;color:#8B99A3;font-weight:600;margin-bottom:3px}
+.t-name{display:block;font-family:'Cormorant Garamond',serif;font-size:37px;line-height:.95;color:#0A1A2A;letter-spacing:-.01em}
+.t-route{display:flex;align-items:flex-end;gap:12px}
+.t-route .t-code{display:block;font-size:17px;font-weight:700;letter-spacing:.03em;color:#0A1A2A;line-height:1}
+.t-arrow{flex:1;height:12px;margin-bottom:2px;min-width:34px}
+.t-foot{display:flex;gap:16px;font-size:6.5px;letter-spacing:.13em;text-transform:uppercase;color:#8B99A3;font-weight:600}
+.t-foot b{color:#0A1A2A;font-weight:700;letter-spacing:.08em}
+.t-stub{position:relative;z-index:2;border-left:1px dashed rgba(169,121,47,.55);padding:18px 8px 15px;display:flex;flex-direction:column;align-items:center;justify-content:space-between}
+.t-stub-brand{font-size:7.5px;letter-spacing:.2em;color:#A9792F;font-weight:700}
+.t-barcode{width:100%;height:84px;background:repeating-linear-gradient(90deg,#0A1A2A 0 2px,transparent 2px 4px,#0A1A2A 4px 5px,transparent 5px 8px,#0A1A2A 8px 11px,transparent 11px 13px);opacity:.85}
+.t-stub-no{font-size:7px;letter-spacing:.2em;color:#5E6E7A;font-weight:700}
 .bp-offer{padding:96px 0;background:var(--ivory)}
 .bp-offer h2{max-width:760px}
 .bp-items{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
@@ -69,7 +90,7 @@
 .bp-done{display:none}
 .bp-done.on{display:block}
 .bp-form.off{display:none}
-.bp-done .bp-pass{transform:none;margin-bottom:26px;box-shadow:0 18px 40px rgba(10,26,42,.16)}
+.bp-done .ticket-wrap{transform:none;filter:drop-shadow(0 16px 24px rgba(10,26,42,.2));margin-bottom:28px}
 .bp-done h3{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;color:var(--ink);margin-bottom:10px}
 .bp-done p{font-size:14.5px;line-height:1.65;color:var(--muted)}
 .bp-faq{padding:86px 0 96px;background:var(--ivory)}
@@ -85,7 +106,13 @@
   .bp-grid{grid-template-columns:1fr;gap:44px}
   .bp-hero{padding:120px 0 64px;min-height:0}
   .bp-hero:before{background:linear-gradient(180deg,rgba(251,248,243,.97) 0%,rgba(251,248,243,.9) 52%,rgba(251,248,243,.7) 100%)}
-  .bp-pass{height:226px;max-width:400px}
+  .ticket{--stub:80px}
+  .ticket-inner{height:214px}
+  .t-main{padding:16px 15px 12px}
+  .t-name{font-size:31px}
+  .t-code,.t-route .t-code{font-size:15px}
+  .t-foot{gap:10px;font-size:6px}
+  .t-barcode{height:70px}
   .bp-items{grid-template-columns:1fr;gap:22px}
   .bp-join-grid{grid-template-columns:1fr;gap:34px}
   .bp-form{padding:26px 22px}
@@ -132,10 +159,26 @@
       <a class="btn btn-gold" href="#join">Get my boarding pass</a>
       <p class="bp-note">One email a week. Unsubscribe in one click.</p>
     </div>
-    <div class="bp-pass" aria-hidden="true">
-      <div class="pt"><span>Quantum Travel 365</span><b>Boarding Pass</b></div>
-      <div class="pm">Member<span>Southern California · Anywhere</span></div>
-      <div class="pb"><span>QT365 · 0001</span><span>Est. 2026</span></div>
+    <div class="ticket-wrap" aria-hidden="true">
+      <div class="ticket">
+        <div class="ticket-inner">
+          <div class="t-main">
+            <div class="t-top"><span class="t-brand">Quantum Travel 365</span><span class="t-type">Boarding Pass</span></div>
+            <div class="t-pax"><span class="t-label">Passenger</span><span class="t-name">Member</span></div>
+            <div class="t-route">
+              <div><span class="t-label">From</span><span class="t-code">ONT</span></div>
+              <svg class="t-arrow" viewBox="0 0 120 14" fill="none" aria-hidden="true"><path d="M2 7h92" stroke="#C9A45B" stroke-width="1.1" stroke-dasharray="4 4"/><path d="M96 7l-7-4.2v8.4L96 7z" fill="#C9A45B"/></svg>
+              <div style="text-align:right"><span class="t-label">To</span><span class="t-code">Anywhere</span></div>
+            </div>
+            <div class="t-foot"><span>Member no. <b>QT365-0001</b></span><span>Class <b>Member</b></span><span>Est. <b>2026</b></span></div>
+          </div>
+          <div class="t-stub">
+            <span class="t-stub-brand">QT365</span>
+            <div class="t-barcode"></div>
+            <span class="t-stub-no" id="bpStub">0001</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -200,10 +243,26 @@
         <p class="form-note" id="bpNote">Free. One email a week. No selling your information. Ever.</p>
       </form>
       <div class="bp-done" id="bpDone" aria-live="polite">
-        <div class="bp-pass">
-          <div class="pt"><span>Quantum Travel 365</span><b>Boarding Pass</b></div>
-          <div class="pm" id="bpName">Member<span id="bpNo">QT365 · 0001</span></div>
-          <div class="pb"><span id="bpHome">Southern California</span><span>Est. 2026</span></div>
+        <div class="ticket-wrap">
+          <div class="ticket">
+            <div class="ticket-inner">
+              <div class="t-main">
+                <div class="t-top"><span class="t-brand">Quantum Travel 365</span><span class="t-type">Boarding Pass</span></div>
+                <div class="t-pax"><span class="t-label">Passenger</span><span class="t-name" id="bpName">Member</span></div>
+                <div class="t-route">
+                  <div><span class="t-label">From</span><span class="t-code" id="bpHome">ONT</span></div>
+                  <svg class="t-arrow" viewBox="0 0 120 14" fill="none" aria-hidden="true"><path d="M2 7h92" stroke="#C9A45B" stroke-width="1.1" stroke-dasharray="4 4"/><path d="M96 7l-7-4.2v8.4L96 7z" fill="#C9A45B"/></svg>
+                  <div style="text-align:right"><span class="t-label">To</span><span class="t-code">Anywhere</span></div>
+                </div>
+                <div class="t-foot"><span>Member no. <b id="bpNo">QT365-0001</b></span><span>Class <b>Member</b></span><span>Est. <b>2026</b></span></div>
+              </div>
+              <div class="t-stub">
+                <span class="t-stub-brand">QT365</span>
+                <div class="t-barcode"></div>
+                <span class="t-stub-no" id="bpStub">0001</span>
+              </div>
+            </div>
+          </div>
         </div>
         <h3>You are on the list.</h3>
         <p>Check your inbox for your boarding pass and this week's drop. If it is not there in five minutes, look in promotions, then reply to the email and I will sort it.</p>
@@ -303,9 +362,11 @@
     };
 
     function show(){
-      document.getElementById('bpName').firstChild.textContent = payload.firstName;
-      document.getElementById('bpNo').textContent = memberNumber(payload.email);
-      document.getElementById('bpHome').textContent = payload.airport || 'Southern California';
+      document.getElementById('bpName').textContent = payload.firstName;
+      var passNo = memberNumber(payload.email).replace(' · ','-');
+      document.getElementById('bpNo').textContent = passNo;
+      document.getElementById('bpStub').textContent = passNo.slice(-4);
+      document.getElementById('bpHome').textContent = payload.airport || 'ONT';
       form.classList.add('off');
       done.classList.add('on');
       done.scrollIntoView({behavior:'smooth', block:'center'});
