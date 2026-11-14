@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boarding Pass · Quantum Travel</title>
+<meta name="description" content="A free weekly email with the fares, suites and escapes worth your attention, plus first access to the trips Charity plans.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://charity-ai.github.io/quantum-travel-site/boarding-pass/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your boarding pass to better trips">
+<meta property="og:description" content="One email a week with the fares and escapes worth your attention. Free membership, no credit card.">
+<meta property="og:url" content="https://charity-ai.github.io/quantum-travel-site/boarding-pass/">
+<meta property="og:image" content="https://charity-ai.github.io/quantum-travel-site/assets/places/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/brand/logo-icon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/brand/app-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+.bp-hero{background:var(--navy);color:var(--ivory);padding:158px 0 96px;position:relative;overflow:hidden}
+.bp-hero:before{content:"";position:absolute;right:-180px;top:-160px;width:720px;height:720px;border-radius:50%;background:radial-gradient(circle,rgba(201,164,91,.16),transparent 62%)}
+.bp-hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,164,91,.4),transparent)}
+.bp-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:76px;align-items:center;position:relative;z-index:2}
+.bp-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,6vw,74px);line-height:1.01;font-weight:400;letter-spacing:-.015em;margin-top:18px;color:var(--ivory);text-wrap:balance}
+.bp-hero h1 em{font-style:italic;color:var(--gold)}
+.bp-sub{font-size:17px;line-height:1.72;color:rgba(251,248,243,.8);max-width:520px;margin-top:24px}
+.bp-hero .btn{margin-top:30px}
+.bp-note{font-size:12px;letter-spacing:.04em;color:rgba(251,248,243,.55);margin-top:16px}
+.bp-pass{background:linear-gradient(155deg,#10263A,#081521);border:1px solid rgba(201,164,91,.45);border-radius:18px;padding:30px 32px;height:258px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 30px 60px rgba(0,0,0,.35);position:relative;overflow:hidden;transform:rotate(-2.5deg)}
+.bp-pass:before{content:"";position:absolute;right:-70px;top:-70px;width:260px;height:260px;border:1px solid rgba(201,164,91,.3);border-radius:50%}
+.bp-pass:after{content:"";position:absolute;right:-20px;top:-20px;width:160px;height:160px;border:1px solid rgba(201,164,91,.18);border-radius:50%}
+.bp-pass .pt{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:rgba(251,248,243,.6)}
+.bp-pass .pt b{color:var(--gold);font-weight:600}
+.bp-pass .pm{font-family:'Cormorant Garamond',serif;font-size:48px;line-height:1;color:var(--ivory)}
+.bp-pass .pm span{display:block;font-family:'Manrope',sans-serif;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-top:12px}
+.bp-pass .pb{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,248,243,.5)}
+.bp-offer{padding:96px 0;background:var(--ivory)}
+.bp-offer h2{max-width:760px}
+.bp-items{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
+.bp-item{border-top:1px solid var(--line);padding-top:20px}
+.bp-item .num{font-size:11px;letter-spacing:.2em;color:var(--gold-d);font-weight:700}
+.bp-item h3{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:500;margin:10px 0 10px;color:var(--ink)}
+.bp-item p{font-size:14.5px;line-height:1.65;color:var(--muted)}
+.bp-join{padding:96px 0 104px;background:#F3EDE3;border-top:1px solid var(--line)}
+.bp-join-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.bp-join h2{max-width:420px}
+.bp-join p.lede{font-size:16px;line-height:1.7;color:#3A4D5C;margin-top:18px;max-width:430px}
+.bp-form{background:#fff;border:1px solid var(--line);padding:36px 38px;box-shadow:0 18px 40px rgba(10,26,42,.06)}
+.bp-form h3{font-family:'Manrope',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-d);margin-bottom:20px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:7px;font-weight:600}
+.field label i{font-style:normal;text-transform:none;letter-spacing:0;color:#9AA6AE;font-weight:400}
+.field input,.field select{width:100%;border:1px solid #DCD3C4;background:#fff;padding:13px 15px;font-family:'Manrope',sans-serif;font-size:15px;color:var(--ink);border-radius:2px;appearance:none}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236B7A88' stroke-width='1.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center}
+.field input:focus,.field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,164,91,.16)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;line-height:1.55;color:var(--muted);margin:4px 0 18px}
+.consent input{margin-top:3px;width:15px;height:15px;flex:none;accent-color:#A9853F}
+.bp-form .form-note{font-size:11.5px;color:#8B99A3;margin-top:12px;text-align:center}
+.bp-done{display:none}
+.bp-done.on{display:block}
+.bp-form.off{display:none}
+.bp-done .bp-pass{transform:none;margin-bottom:26px;box-shadow:0 18px 40px rgba(10,26,42,.16)}
+.bp-done h3{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;color:var(--ink);margin-bottom:10px}
+.bp-done p{font-size:14.5px;line-height:1.65;color:var(--muted)}
+.bp-faq{padding:86px 0 96px;background:var(--ivory)}
+.bp-faq h2{max-width:520px}
+.bp-faq details{border-top:1px solid var(--line);padding:22px 0}
+.bp-faq details:last-of-type{border-bottom:1px solid var(--line)}
+.bp-faq summary{cursor:pointer;font-size:16px;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:20px}
+.bp-faq summary::-webkit-details-marker{display:none}
+.bp-faq summary:after{content:"+";color:var(--gold-d);font-size:22px;line-height:1}
+.bp-faq details[open] summary:after{content:"–"}
+.bp-faq p{font-size:14.5px;line-height:1.7;color:var(--muted);margin-top:12px;max-width:760px}
+@media(max-width:900px){
+  .bp-grid{grid-template-columns:1fr;gap:44px}
+  .bp-hero{padding:130px 0 70px}
+  .bp-pass{height:226px;max-width:400px}
+  .bp-items{grid-template-columns:1fr;gap:22px}
+  .bp-join-grid{grid-template-columns:1fr;gap:34px}
+  .bp-form{padding:26px 22px}
+  .frow{grid-template-columns:1fr}
+  .bp-hero h1{font-size:clamp(42px,11vw,58px)}
+}
+</style>
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="../" aria-label="Quantum Travel home">
+      <img src="../assets/brand/logo-nav-reverse.svg" alt="Quantum Travel">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="../#destinations">Destinations</a>
+      <a href="../#unique">Hidden gems</a>
+      <a href="../#deals">Deals</a>
+      <a href="../#about">About</a>
+      <a href="../#plan">Plan my trip</a>
+    </nav>
+    <a class="btn btn-gold btn-sm" href="#join">Get my pass</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../#destinations">Destinations</a>
+  <a href="../#unique">Hidden gems</a>
+  <a href="../#deals">Deals</a>
+  <a href="../#about">About</a>
+  <a href="../#plan">Plan my trip</a>
+  <a class="btn btn-gold" href="#join">Get my boarding pass</a>
+</div>
+<main id="main">
+
+<section class="bp-hero">
+  <div class="wrap bp-grid">
+    <div>
+      <p class="eyebrow light">Free membership · No credit card</p>
+      <h1>Your boarding pass<br>to <em>better trips.</em></h1>
+      <p class="bp-sub">One email a week with the fares, suites and escapes worth your attention, plus first access to the trips I plan before the dates go public.</p>
+      <a class="btn btn-gold" href="#join">Get my boarding pass</a>
+      <p class="bp-note">One email a week. Unsubscribe in one click.</p>
+    </div>
+    <div class="bp-pass" aria-hidden="true">
+      <div class="pt"><span>Quantum Travel 365</span><b>Boarding Pass</b></div>
+      <div class="pm">Member<span>Southern California · Anywhere</span></div>
+      <div class="pb"><span>QT365 · 0001</span><span>Est. 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bp-offer">
+  <div class="wrap">
+    <p class="eyebrow">What lands in your inbox</p>
+    <h2>Not another newsletter.<br><em>A standing invitation.</em></h2>
+    <div class="bp-items">
+      <div class="bp-item">
+        <div class="num">01</div>
+        <h3>The Wednesday drop</h3>
+        <p>One fare, suite or resort worth booking that week, with the dates, the price I would pay, and the catch if there is one.</p>
+      </div>
+      <div class="bp-item">
+        <div class="num">02</div>
+        <h3>First access</h3>
+        <p>Trip slots, group departures and supplier sales before they go public. Members see the dates before the feed does.</p>
+      </div>
+      <div class="bp-item">
+        <div class="num">03</div>
+        <h3>The short list</h3>
+        <p>Honest notes from places I have actually sent clients, including the hotels I would skip and the upgrades worth asking for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bp-join" id="join">
+  <div class="wrap bp-join-grid">
+    <div>
+      <p class="eyebrow">Join the list</p>
+      <h2>Get your boarding pass.</h2>
+      <p class="lede">Tell me where you fly from and the kind of trip you keep almost booking. I will send the drop that fits, and nothing that does not.</p>
+      <p class="lede">Free to join. I earn from suppliers when you book, never from selling your information.</p>
+    </div>
+    <div>
+      <form class="bp-form" id="bpForm" novalidate>
+        <h3>Boarding pass request</h3>
+        <div class="frow">
+          <div class="field"><label for="bpFirst">First name</label><input id="bpFirst" name="firstName" type="text" autocomplete="given-name" required placeholder="Charity"></div>
+          <div class="field"><label for="bpEmail">Email</label><input id="bpEmail" name="email" type="email" autocomplete="email" required placeholder="you@email.com"></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="bpPhone">Mobile <i>(optional)</i></label><input id="bpPhone" name="phone" type="tel" autocomplete="tel" placeholder="(951) 555-0134"></div>
+          <div class="field"><label for="bpAirport">Home airport</label><input id="bpAirport" name="airport" type="text" placeholder="ONT, LAX, SNA"></div>
+        </div>
+        <div class="field">
+          <label for="bpStyle">The trip you keep almost booking</label>
+          <select id="bpStyle" name="tripStyle">
+            <option value="">Choose one</option>
+            <option>Beach and resort</option>
+            <option>Europe and culture</option>
+            <option>Cruise</option>
+            <option>Adventure and nature</option>
+            <option>Honeymoon or anniversary</option>
+            <option>Surprise me</option>
+          </select>
+        </div>
+        <label class="consent"><input type="checkbox" name="consent" required> Send me the weekly drop and member trip alerts. I can unsubscribe anytime.</label>
+        <button class="btn btn-gold btn-full" type="submit" id="bpSubmit">Send my boarding pass</button>
+        <p class="form-note" id="bpNote">Free. One email a week. No selling your information. Ever.</p>
+      </form>
+      <div class="bp-done" id="bpDone" aria-live="polite">
+        <div class="bp-pass">
+          <div class="pt"><span>Quantum Travel 365</span><b>Boarding Pass</b></div>
+          <div class="pm" id="bpName">Member<span id="bpNo">QT365 · 0001</span></div>
+          <div class="pb"><span id="bpHome">Southern California</span><span>Est. 2026</span></div>
+        </div>
+        <h3>You are on the list.</h3>
+        <p>Check your inbox for your boarding pass and this week's drop. If it is not there in five minutes, look in promotions, then reply to the email and I will sort it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bp-faq">
+  <div class="wrap">
+    <p class="eyebrow">Straight answers</p>
+    <h2>Before you hand over your email.</h2>
+    <details open>
+      <summary>Is it really free?</summary>
+      <p>Yes. There is no card, no trial and no upsell to join. I earn a commission from the hotel, airline or cruise line when you book through me, and the weekly email is how I stay useful between trips.</p>
+    </details>
+    <details>
+      <summary>How often will you email me?</summary>
+      <p>Once a week, on Wednesday, plus a separate alert if a fare drops on something you told me you are watching. You can turn the alerts off and keep the weekly drop.</p>
+    </details>
+    <details>
+      <summary>Do I have to book with you?</summary>
+      <p>No. Plenty of members use the pass to book on their own. It is worth having either way, and if you ever want a second set of eyes on a price, reply to any email and ask.</p>
+    </details>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <img src="../assets/brand/logo-primary-reverse.svg" alt="Quantum Travel">
+      <p>Live travel pricing, planned by a human.<br>Southern California and everywhere after that.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Explore</h4>
+        <a href="../#destinations">Destinations</a>
+        <a href="../#unique">Hidden gems</a>
+        <a href="../#deals">This month's deals</a>
+        <a href="../#plan">Plan my trip</a>
+      </div>
+      <div>
+        <h4>Book</h4>
+        <a href="../#plan">Trip request</a>
+        <a href="../#about">About Charity</a>
+        <a href="#join">Boarding pass</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Income disclosure</a>
+        <a href="#">Seller of travel</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 Quantum Travel. Independent travel advisor affiliated with Surge365.</p>
+    <p>California Seller of Travel Registration No. <span class="pending">[to be inserted]</span>. Registration as a seller of travel does not constitute approval by the State of California.</p>
+  </div>
+</footer>
+<script src="../app.js"></script>
+<script>
+(function(){
+  'use strict';
+  // Paste the GoHighLevel inbound webhook URL here when the workflow trigger exists.
+  var BP_ENDPOINT = '';
+  var form = document.getElementById('bpForm');
+  var done = document.getElementById('bpDone');
+  var note = document.getElementById('bpNote');
+  var submit = document.getElementById('bpSubmit');
+  if (!form) return;
+
+  function memberNumber(email){
+    var h = 0;
+    for (var i = 0; i < email.length; i++) { h = ((h << 5) - h) + email.charCodeAt(i); h |= 0; }
+    return 'QT365 · ' + String(Math.abs(h) % 9000 + 1000);
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var data = Object.fromEntries(new FormData(form).entries());
+    if (!data.firstName || !data.firstName.trim()) { form.querySelector('[name="firstName"]').focus(); return; }
+    if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) { form.querySelector('[name="email"]').focus(); return; }
+    if (!data.consent) { note.textContent = 'Please tick the box so I know you want the emails.'; return; }
+
+    var payload = {
+      firstName: data.firstName.trim(),
+      email: data.email.trim().toLowerCase(),
+      phone: (data.phone || '').trim(),
+      airport: (data.airport || '').trim().toUpperCase(),
+      tripStyle: data.tripStyle || '',
+      source: 'boarding-pass',
+      page: location.href,
+      tags: ['boarding-pass'].concat(data.tripStyle ? ['style-' + data.tripStyle.toLowerCase().replace(/[^a-z]+/g,'-').replace(/^-|-$/g,'')] : [])
+    };
+
+    function show(){
+      document.getElementById('bpName').firstChild.textContent = payload.firstName;
+      document.getElementById('bpNo').textContent = memberNumber(payload.email);
+      document.getElementById('bpHome').textContent = payload.airport || 'Southern California';
+      form.classList.add('off');
+      done.classList.add('on');
+      done.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+
+    if (!BP_ENDPOINT) {
+      console.info('[Quantum Travel] Boarding pass (preview mode, not sent):', payload);
+      show();
+      return;
+    }
+
+    submit.disabled = true;
+    var original = submit.textContent;
+    submit.textContent = 'Issuing your pass...';
+    fetch(BP_ENDPOINT, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    }).then(function(r){ if (!r.ok) throw new Error('Request failed'); show(); })
+      .catch(function(){
+        submit.disabled = false;
+        submit.textContent = original;
+        note.textContent = 'That did not go through. Email charity@quantumtravel365.com and I will add you by hand.';
+        note.style.color = '#B4483C';
+      });
+  });
+})();
+</script>
+</body>
+</html>
