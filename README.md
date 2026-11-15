@@ -6,7 +6,7 @@ Live booking engine: pending. Set `bookingUrl` in `app.js` once the Vortex URL i
 
 Production domain: https://quantumtravel365.com
 
-Live now: https://charity-ai.github.io/quantum-travel-site/
+Live now: https://quantumtravel365.com/
 Production target: https://quantumtravel365.com (Cloudflare Pages)
 
 ## Updating the live site
@@ -24,7 +24,7 @@ When Cloudflare Pages is connected to `main`, that second line disappears.
 
 1. Cloudflare Pages, create a project from this repo. No build command, output directory `/`.
 2. Add `quantumtravel365.com` and `www.quantumtravel365.com` as custom domains.
-3. Replace every `https://charity-ai.github.io/quantum-travel-site/` with `https://quantumtravel365.com/` in `index.html`, `robots.txt` and `sitemap.xml`.
+3. The custom domain is declared in `CNAME`. DNS points at GitHub Pages.
 4. Commit and push. Cloudflare redeploys automatically.
 
 Branded short link: https://quantumtravel365.com/book (302 to the booking engine)
